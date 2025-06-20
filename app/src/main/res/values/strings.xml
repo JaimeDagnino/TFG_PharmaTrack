@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PharmaTrack</string>
+    <string name="hint_nombre">Especialidad medica:</string>
+    <string name="hint_fecha"> Fecha:</string>
+    <string name="hint_hora"> Hora:</string>
+    <string name="hint_guardar">Guardar Cita</string>
+    <string name="recordatorio">Recordatorio:</string>
+    <string name="hint_addc">Añadir Cita</string>
+    <string name="hint_addm">Añadir Medicamento</string>
+    <string name="hint_cambiar">Cambiar Cita</string>
+    <string name="hint_borrar">Borrar Cita</string>
+    <string name="text_recordatorio">Se han establecido automaticamente dos recordatorios para su cita: uno un día antes de su cita y el otro 2 horas antes de su cita.</string>
+
+</resources>

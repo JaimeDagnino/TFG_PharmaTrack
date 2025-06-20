@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scroll_progreso"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:fillViewport="true"
+    android:background="@color/beige"
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ===== 1) Racha Actual con Lottie ===== -->
+        <LinearLayout
+            android:id="@+id/llRacha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lavRacha"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_fileName="fire.json"
+                />
+
+            <TextView
+                android:id="@+id/tvRacha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 días seguidos"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/darkblue" />
+        </LinearLayout>
+
+        <!-- ===== 2) Selector de Fecha (BottomSheet) ===== -->
+        <LinearLayout
+            android:id="@+id/llSelectorFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/light_gray"
+            android:padding="12dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvFechaSeleccionada"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hoy, sábado 7 de junio de 2025"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/darkblue" />
+
+            <ImageView
+                android:id="@+id/ivAbrirCalendario"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_calendar"
+                app:tint="@color/darkblue"
+                android:contentDescription="Abrir selector de fecha" />
+        </LinearLayout>
+
+        <!-- ===== 3) Detalle Diario ===== -->
+        <TextView
+            android:id="@+id/tvDetalleDia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selecciona una fecha para ver detalles"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvExplicacionTomas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medicamentos programados para esta fecha:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/darkblue"
+            android:visibility="gone"
+            android:layout_marginBottom="4dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerTomasFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:nestedScrollingEnabled="false"
+            android:clipToPadding="false"
+            android:layout_marginBottom="16dp" />
+
+        <!-- ===== 4) Medicamentos de Hoy ===== -->
+        <TextView
+            android:id="@+id/tvSubtituloMedicamentos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medicamentos de Hoy"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/darkblue"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvProgresoMedicamentos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 / 0"
+            android:textSize="16sp"
+            android:textColor="@color/darkblue"
+            android:layout_marginBottom="4dp" />
+
+        <ProgressBar
+            android:id="@+id/pbMedicamentos"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:progress="0"
+            android:max="1"
+            android:layout_marginBottom="16dp" />
+
+        <!-- ===== 5) Predicción de Reposición ===== -->
+        <TextView
+            android:id="@+id/tvPrediccionReposicion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cargando predicción..."
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</ScrollView>
+
+
+
+
+
+
+
+
+

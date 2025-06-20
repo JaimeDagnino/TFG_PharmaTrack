@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.Citas.Add_Cita"
+    android:background="@color/beige">
+
+    <!-- Contenedor de los campos -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/selecIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/ic_citas"
+            android:layout_gravity="center"
+            app:tint="@color/darkblue" />
+
+        <!-- Campo de Nombre -->
+        <AutoCompleteTextView
+            android:id="@+id/txtNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_nombre"
+            android:textSize="24sp"
+            android:padding="10dp"
+            android:completionThreshold="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="7dp"
+            android:background="@drawable/icon_border" />
+
+        <!-- Campo de Fecha -->
+        <EditText
+            android:id="@+id/txtFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hint_fecha"
+            android:focusable="false"
+            android:clickable="true"
+            android:inputType="datetime"
+            android:textSize="24sp"
+            android:layout_marginBottom="10dp"
+            android:paddingStart="8dp"
+            android:layout_marginEnd="7dp"
+            android:background="@drawable/icon_border"/>
+
+        <!-- Campo de Hora -->
+        <EditText
+            android:id="@+id/txtHora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/hint_hora"
+            android:focusable="false"
+            android:clickable="true"
+            android:inputType="datetime"
+            android:textSize="24sp"
+            android:layout_marginBottom="10dp"
+            android:paddingStart="8dp"
+            android:layout_marginEnd="7dp"
+            android:background="@drawable/icon_border"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recordatorio"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_recordatorio"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:justificationMode="inter_word"
+            android:layout_marginBottom="5dp"/>
+
+        <!-- Botón para Guardar -->
+        <Button
+            android:id="@+id/btnGuarda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hint_guardar"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+</LinearLayout>
+

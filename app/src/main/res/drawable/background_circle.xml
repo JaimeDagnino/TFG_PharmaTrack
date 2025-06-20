@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <!-- Tamaño estándar: ajusta si tu celda es más grande/pequeña -->
+    <size android:width="40dp" android:height="40dp" />
+    <solid android:color="@android:color/transparent" />
+</shape>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:clipToPadding="false"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    android:backgroundTint="@color/beige">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="24dp">
+
+        <!-- Icono -->
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_capsula"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            android:contentDescription="Icono cápsula" />
+
+        <!-- Pregunta -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Quieres llevar un control de las cápsulas que te quedan?"
+            android:textSize="22sp"
+            android:textColor="@color/darkblue"
+            android:textStyle="bold"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_horizontal"/>
+
+        <!-- Opciones Sí / No -->
+        <RadioGroup
+            android:id="@+id/radioSeguimiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/rbSi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sí"
+            android:textSize="18sp"
+            android:layout_marginEnd="24dp"/>
+
+        <RadioButton
+            android:id="@+id/rbNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:textSize="18sp"/>
+
+        </RadioGroup>
+
+
+    <!-- Campo numérico -->
+        <EditText
+            android:id="@+id/edtCapsulas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="¿Cuántas cápsulas te quedan?"
+            android:inputType="number"
+            android:enabled="false"
+            android:layout_marginBottom="32dp"
+            android:gravity="center_horizontal"/>
+
+        <!-- Botón siguiente -->
+        <Button
+            android:id="@+id/btnSiguiente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Siguiente"
+            android:minHeight="56dp"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/darkblue"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="24dp" />
+    </LinearLayout>
+</ScrollView>
+

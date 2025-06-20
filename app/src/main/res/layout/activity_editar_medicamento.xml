@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLinear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    android:backgroundTint="@color/beige">
+
+    <!--
+      ① ScrollView con layout_height="0dp" y weight="1",
+         de modo que ocupe todo el espacio restante sobre el botón.
+    -->
+    <ScrollView
+        android:id="@+id/scrollContenido"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Icono del medicamento (AppCompatImageView para tintar bien) -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivIconoMedicamento"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                android:contentDescription="Icono medicamento"
+                android:src="@drawable/ic_medicamento"
+                app:tint="@color/darkblue" />
+
+            <!-- Campo “Nombre” -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Nombre"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/darkblue"/>
+            <EditText
+                android:id="@+id/edtNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Campo “Frecuencia (veces al día)” -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Frecuencia (veces al día)"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/darkblue"/>
+            <EditText
+                android:id="@+id/edtFrecuencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Sección “Horas” -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Horas"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/darkblue"/>
+            <LinearLayout
+                android:id="@+id/layoutHoras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp" />
+            <!-- Los botones de hora se añaden dinámicamente en tu código -->
+
+            <!-- Sección “Días de tratamiento” -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Días de tratamiento"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/darkblue"/>
+
+            <CheckBox
+                android:id="@+id/chkCronico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Tratamiento crónico"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/edtDias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Número de días (si no es crónico)"
+                android:inputType="number" />
+
+            <!-- Sección “Cápsulas restantes” -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Cápsulas restantes"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/darkblue"/>
+            <EditText
+                android:id="@+id/edtCapsulas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Sección “Dosis por toma” -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Dosis por toma"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/darkblue"/>
+            <EditText
+                android:id="@+id/edtDosisPorToma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Sección “Umbral de aviso” -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Umbral de aviso"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/darkblue"/>
+            <EditText
+                android:id="@+id/edtUmbralAviso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_marginTop="4dp"/>
+
+            <!-- NOTA: Aquí NO va el botón de Guardar, porque estará fuera del ScrollView -->
+        </LinearLayout>
+    </ScrollView>
+
+    <!--
+      ② Botón “Guardar cambios” fijo en la parte inferior:
+         se coloca después del ScrollView para que quede siempre visible.
+    -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGuarda"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Guardar cambios"
+        android:backgroundTint="@color/darkblue"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:cornerRadius="8dp" />
+
+</LinearLayout>

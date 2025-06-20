@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TransparentDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="ResumenItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <!-- Tema base de tu app sin ActionBar, si no lo tienes ya -->
+    <style name="Theme.Pharmatrack.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Colores primarios -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Permite dibujar detrás de la barra de estado -->
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <!-- Tema específico para el resumen de medicamento -->
+    <style name="Theme.Pharmatrack.Resumen" parent="Theme.Pharmatrack.NoActionBar">
+        <!-- Si quieres puedes personalizar aquí más atributos -->
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- Para los títulos de día de la semana (L, M, X, etc.) -->
+    <style name="CalendarWeekDayLarge">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Para los números de cada día del mes -->
+    <style name="CalendarDateLarge">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 1) Estilo para la cabecera de fecha en el BottomSheet -->
+    <style name="CalendarHeaderBrand">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/brand_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 2) Estilo para los nombres de día de la semana (“LUN”, “MAR”, etc.) -->
+    <style name="CalendarWeekDayLargeBrand">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/brand_on_surface</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 3) Estilo para los números de cada día del mes (“1”, “2”, “3”) -->
+    <style name="CalendarDateLargeBrand">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/brand_on_surface</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Theme.Pharmatrack.NoActionBar." parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- tu configuración habitual… -->
+    </style>
+
+    <!-- ================================
+         ❶ Definimos CalendarHeaderLargeBrand
+         Este estilo extiende de un estilo base de MCV para cabecera.
+         Le subimos el tamaño de texto y le ponemos tu color de marca.
+         ================================= -->
+    <style name="CalendarHeaderLargeBrand">
+        <!-- Tamaño mayor para que se vea bien en pantallas grandes -->
+        <item name="android:textSize">20sp</item>
+        <!-- Color de texto de tu marca -->
+        <item name="android:textColor">@color/brand_primary</item>
+    </style>
+
+
+
+
+</resources>
+

@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_hoy"
+        android:icon="@drawable/ic_hoy"
+        android:title="Hoy" />
+
+    <item
+        android:id="@+id/navigation_progreso"
+        android:icon="@drawable/ic_progreso"
+        android:title="Progreso" />
+
+    <item
+        android:id="@+id/navigation_citas"
+        android:icon="@drawable/ic_citas"
+        android:title="Citas" />
+
+    <item
+        android:id="@+id/navigation_medicamentos"
+        android:icon="@drawable/ic_medicamentos"
+        android:title="Medicamentos" />
+
+</menu>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    android:backgroundTint="@color/beige">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Icono con margen superior -->
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_frecuencia"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            android:contentDescription="Icono medicamento" />
+
+        <!-- Pregunta -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Cuántas veces al día tomas este medicamento?"
+            android:textSize="22sp"
+            android:textColor="@color/darkblue"
+            android:textStyle="bold"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Opciones -->
+        <RadioGroup
+            android:id="@+id/radioFrecuencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp">
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 vez al día"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2 veces al día"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/rb3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 veces al día"
+                android:textSize="18sp" />
+        </RadioGroup>
+
+        <!-- Botón siguiente -->
+        <Button
+            android:id="@+id/btnSiguiente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Siguiente"
+            android:minHeight="56dp"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/darkblue"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</ScrollView>
+
+

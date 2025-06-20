@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    android:backgroundTint="@color/beige">
+
+    <!-- Fija arriba -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchMedicamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Buscar medicamento..."
+        android:iconifiedByDefault="false"
+        android:background="@drawable/searchview_border"
+        android:padding="8dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="15dp"/>
+
+    <!-- Lista desplazable -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMedicamentos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="always"
+        android:clipToPadding="false" />
+
+    <!-- Botón separado, no pegado al borde -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAgregarManual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No encuentro mi medicamento"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:backgroundTint="@color/darkblue"
+        app:icon="@drawable/ic_add"
+        app:iconGravity="textStart"
+        app:iconPadding="10dp"
+        app:iconSize="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="30dp" />
+</LinearLayout>
+
+
+
+
+

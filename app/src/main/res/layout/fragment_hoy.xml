@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_hoy"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:descendantFocusability="beforeDescendants"
+    android:fillViewport="true"
+    android:padding="12dp"
+    android:backgroundTint="@color/beige">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/beige">
+
+        <!-- ======== SECCIÓN CITAS DE HOY ======== -->
+        <TextView
+            android:id="@+id/tvTituloCitas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Citas de Hoy"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#0D47A1"
+            android:layout_marginBottom="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCitasHoy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:nestedScrollingEnabled="false"
+            android:clipToPadding="false"
+            android:focusable="true"
+            android:paddingBottom="8dp" />
+
+        <!-- SEPARADOR ENTRE SECCIONES -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#0D47A1" />
+
+        <!-- ======== SECCIÓN MEDICAMENTOS DE HOY ======== -->
+        <!-- Aquí incluimos un LinearLayout horizontal para el título + contador-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <!-- Título "Medicamentos de Hoy" -->
+            <TextView
+                android:id="@+id/tvTituloMedicamentos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Medicamentos de Hoy"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#0D47A1" />
+
+            <!-- Contador "X de Y" -->
+            <TextView
+                android:id="@+id/tvContadorMedicamentos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/0"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#0D47A1"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerMedicamentosHoy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:nestedScrollingEnabled="false"
+            android:clipToPadding="false"
+            android:paddingBottom="8dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"/>
+
+    </LinearLayout>
+</ScrollView>
+
+
+
+
